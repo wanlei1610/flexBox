@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex输入框布局</title>
+    <style>
+        .inputBox{
+            display:flex;
+            width:1000px;
+            height:50px;
+            border:5px solid #f40;
+            border-radius:5px;
+            margin:100px auto;
+            font:600 20px/20px  sans-serif;
+            color:#333;
+        
+        }
+        .inputItem{
+            display:flex;
+            width:80px;
+            justify-content:center;
+            align-items:center;
+        }
+        .inputField{
+            flex:1;
+            padding-left:20px;
+            font:600 20px/20px  sans-serif;
+            color:#333;
+        }
+        .inputBtn{
+            display:flex;
+            width:100px;
+            justify-content: center;
+            font:600 20px/20px  sans-serif;
+            color:#333;
+        }
+    </style>
+</head>
+<body>
+    <div class="inputBox">
+        <span class="inputItem">前奏</span>
+        <input type="text" placeholder="车厘子" class="inputField">
+        <button class="inputBtn">搜索</button>
+    </div>
+    
+</body>
+</html>

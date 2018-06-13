@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex网格布局实例篇</title>
+    <style>
+        
+        .grid{
+            display:flex;
+            width:800px;
+            height:600px;
+            border:10px solid #f40;
+            padding:20px 50px;
+            flex-wrap:wrap;
+            align-content:flex-start;
+
+        }
+         .column{
+            display:flex;
+            flex-basis:100%;
+            height:100px;
+            margin-bottom:20px;
+        }
+        .column:last-of-type{
+            height:auto;
+        }
+        .column:last-of-type .grid-cell{
+            height:240px;;
+            align-items:flex-start;
+        }
+        .grid-cell{
+            display:flex;
+            flex:1;
+            height:100px;
+            background:green;
+            margin-right:50px;
+            justify-content:center;
+            align-items:center;
+            font-size:36px;
+            color:#f40;
+            overflow: auto;
+        }
+        .grid-cell:nth-child(even){
+            background:yellow;
+        }
+        .grid-cell:last-of-type{
+            margin-right:0px;
+        } 
+    </style>
+</head>
+<body>
+    
+    <div class="grid">
+        <div class="column">
+                <div class="grid-cell">1/2</div>
+                <div class="grid-cell">1/2</div>
+        </div>
+        
+        <div class="column">
+                <div class="grid-cell">1/3</div>
+                <div class="grid-cell">1/3</div>
+                <div class="grid-cell">1/3</div>
+        </div>
+        <div class="column">
+                <div class="grid-cell">1/4</div>
+                <div class="grid-cell">1/4</div>
+                <div class="grid-cell">1/4</div>
+                <div class="grid-cell">1/4</div>
+        </div>
+        <div class="column">
+            <div class="grid-cell">左倾思想，打倒地主，无产阶级人民万岁,左倾思想，打倒地主，无产阶级人民万岁左倾思想，打倒地主，无产阶级人民万岁左倾思想，打倒地主，无产阶级人民万岁左倾思想，打倒地主，无产阶级人民万岁左倾思想，打倒地主，无产阶级人民万岁</div>
+            <div class="grid-cell">右倾思想，走资派，国贼，汉奸右倾思想，走资派，国贼，汉奸！右倾思想，走资派，国贼，汉奸！右倾思想，走资派，国贼，汉奸！右倾思想，走资派，国贼，汉奸！右倾思想，走资派，国贼，汉奸！右倾思想，走资派，国贼，汉奸！</div>
+        </div>
+       
+    </div>
+    
+</body>
+</html>

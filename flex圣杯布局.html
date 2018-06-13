@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex圣杯布局</title>
+    <style>
+        html, body{
+            margin:0;
+            padding:0;
+            /* width:100%; */
+            /* height:100%;; */
+        }
+        .box{
+            display:flex;
+            min-height:100vh;
+            background:#ccc;
+            flex-direction:column;
+        }
+        header,footer{
+            display:flex;
+            height:100px;
+            background:#f40;
+            font-size:40px;
+            justify-content: center;
+            align-items: center;
+            color:#fff;
+        }
+        main{
+            display:flex;
+            flex:1;
+        }
+        main div{
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            font-size:40px;
+            color:#fff;
+        }
+        .main{
+            flex:1;
+            background:#ccc;
+        }
+        .left{
+            flex:0 0 20%;
+            background:skyblue;
+            order: -1;
+        }
+        .right{
+            flex:0 0 20%;
+            background:orange;
+        }
+        @media(max-width:768px){
+            .main{
+                display:flex;
+                flex:1;
+            }
+            .left,.right{
+                flex:0;
+                display: none;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <header>天安门城楼</header>
+        <main>
+            <div class="left">人民大会堂</div>
+            <div class="main">天安门广场</div>
+            <div class="right">国家博物馆</div>
+        </main>
+        <footer>毛主席纪念堂</footer>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex百分比布局</title>
+    <style>
+        .grid{
+            width:800px;
+            height:600px;
+            padding:20px;
+            display:flex;
+            border:10px solid #f40;
+            flex-wrap:wrap;
+            align-content:flex-start;
+            
+        }
+        .column{
+            display:flex;
+            flex-basis:100%;
+            height:100px;
+            margin-bottom:20px;
+            
+        }
+        .grid-cell{
+            display:flex;
+            flex:1;
+            height:100px;
+            background:yellow;
+            margin-right:20px;
+            justify-content: center;
+            align-items:center;
+            font-size:36px;
+            color:#f40;
+            
+        }
+        .grid-cell:last-of-type{
+            margin-right:0px;
+        }
+        .grid-cell:nth-child(even){
+            background:green;
+        }
+        .grid-cell.u1{
+            flex:0 0 50%;
+        }
+        .grid-cell.u2{
+            flex:0 0 70%;
+        }
+        .grid-cell.u3{
+            flex:0 0 40%;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="column">
+            <div class="grid-cell u1">1/2</div>
+            <div class="grid-cell ">auto</div>
+            <div class="grid-cell ">auto</div>
+        </div>
+        <div class="column">
+            <div class="grid-cell u2">auto</div>
+            <div class="grid-cell u">1/3</div>
+        </div>
+        <div class="column">
+            <div class="grid-cell ">1/4</div>
+            <div class="grid-cell u3">auto</div>
+            <div class="grid-cell u">1/3</div>
+        </div>
+    </div>
+    
+</body>
+</html>
